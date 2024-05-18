@@ -1,0 +1,17 @@
+runtime: python310
+
+handlers:
+- url: /static
+  static_dir: static/
+
+- url: /.*
+  script: auto
+
+
+#entrypoint: gunicorn -b :$PORT crewai_project.asgi:application
+#
+## Optional: Basic scaling
+#instance_class: F2
+#
+## Optional: static files settings
+#static_dir: static
